@@ -1,0 +1,70 @@
+@import '../../config-scss/variables.scss';
+
+:host {
+    @keyframes insertPokemonData {
+        from {top: -5px;opacity: 0;}
+        to {top: 10px;opacity: 1;}
+    }
+    @keyframes showTop {
+        from {right: -100px;opacity: 0;}
+        to {right: 0px;opacity: 1;}
+    }
+    @keyframes hideTop {
+        from {right: 0px;opacity: 1;}
+        to {right: -100px;opacity: 0;}
+    }
+    @keyframes showTopM {
+        from {right: -100px;opacity: 0;}
+        to {right: 0px;opacity: .7;}
+    }
+    @keyframes hideTopM {
+        from {right: 0px;opacity: .7;}
+        to {right: -100px;opacity: 0;}
+    }
+
+    p {
+        position: absolute;
+        font-style: italic;
+        animation: insertPokemonData 1s;
+        top: 10px;
+        right: 20px;
+        color: var(--primary-color);
+
+        mark {
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--secondary-color);
+            background: none;
+        }
+    }
+
+    .ao-topo {
+        position: fixed;
+        animation: hideTop 1s;
+        animation-fill-mode: forwards;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        margin: 0 8px 12px 0;
+    }
+    
+    .show-scrollTop {
+        opacity: 1;
+        animation: showTop 1s;
+    }
+
+    .start-invisible {
+        visibility: hidden;
+    }
+
+    @media (max-width: 685px) {
+        .ao-topo {
+            animation: hideTopM 1s;
+            animation-fill-mode: forwards;
+        }
+        .show-scrollTop {
+            opacity: .7;
+            animation: showTopM 1s;
+        }
+    }
+}

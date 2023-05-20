@@ -1,0 +1,11 @@
+<p *ngIf="count > 0">Existem <mark>{{count}}</mark> pokémons disponíveis!</p>
+<!-- Header -->
+<poke-header></poke-header>
+
+<main>
+    <poke-list></poke-list>
+</main>
+
+<div class="ao-topo" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled, 'start-invisible': startPage }">
+    <img width="64" height="64" src="assets/arrow_up.png" alt="Ir ao topo da página" />
+</div>  

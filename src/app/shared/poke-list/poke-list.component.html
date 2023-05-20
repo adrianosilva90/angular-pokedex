@@ -1,0 +1,32 @@
+<!-- Search -->
+<poke-search (emitSearch)="getSearch($event,0)"></poke-search>
+
+<section class="listagem">
+    <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons" let-i="index">
+        <a [routerLink]="['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status && i < this.num">
+            <section class="pokemon__status">
+                <h2>{{ pokemon.name }}</h2>
+
+                <ul>
+                    <li *ngFor="let value of pokemon.status.types">
+                        {{ value.type.name | backendEdit }}
+                    </li>
+                </ul>
+            </section>
+
+            <section class="pokemon__image">
+                <img 
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{ pokemon.status.id }}.png"
+                    [alt]="pokemon.name"
+                >
+            </section>
+        </a>
+    </ng-template>
+    <a *ngIf="tamanhoArray > num" (click)="getSearch(campoTexto,1)" class="link btn btn__secondary">Carregar mais...</a>
+</section>
+
+<img *ngIf="tamanhoArray <= 0"
+    src="../../../assets/error.png"
+    alt="Pokémon não encontrado!"
+    width="100%"
+>

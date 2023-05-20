@@ -1,0 +1,56 @@
+@import './app/config-scss/variables.scss';
+@import './app/config-scss/reset.scss';
+@import './app/config-scss/rem-calc.scss';
+@import './app/config-scss/btn.scss';
+@import './app/config-scss/animation.scss';
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+*::-webkit-scrollbar-track {
+    background: #962323;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border: 2px solid var(--secondary-color);
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    /*background: var(--primary-color)*/
+}
+
+main {
+    max-width: rem-calc(600);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.pokebg {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: -10;
+    background-image: url('./assets/bg/pokebg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.totodile {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    background-image: url('./assets/totodile.png');
+    background-size: 150px 150px;
+    z-index: 1;
+}
+
+@media (max-width: 660px) {
+    .totodile {
+        display: none;
+    }
+}
