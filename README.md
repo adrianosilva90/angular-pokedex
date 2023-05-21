@@ -1,4 +1,4 @@
-# ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png =25x25) Pokedex 
+# <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png" width="25" height="25"> Pokedex 
 Olá! Esta é uma Pokedex, onde é possivel procurar quaisquer pokémons lançados até hoje e ver seus atributos e foto. Este aplicativo utiliza uma API chamada [PokéAPI](https://pokeapi.co/) que é responsável por trazer ao front-end todos os pokémons e dados necessários. Todo o front-end foi construído em Angular.
 
 
@@ -19,5 +19,5 @@ Eu realizei diversas mudanças para melhorar o projeto e testar um pouco dos meu
 ## ❌ Possíveis falhas
 A API retorna alguns pokémons que não possuem dados como: vida, ataque, defesa, etc. Como a tela de detalhes foi filtrada para retornar um erro caso esses dados não sejam retornados, ele simplesmente retorna uma mensagem de erro do tipo **Não encontrado**, semelhante à mensagem que é retornada caso um pokémon digitado não exista.
 
-## ![](https://cdn.icon-icons.com/icons2/2699/PNG/512/angular_logo_icon_169595.png =22x22) Sobre o Angular
+## <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/angular_logo_icon_169595.png" width="18" height="18"> Sobre o Angular
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 16.0.1.
